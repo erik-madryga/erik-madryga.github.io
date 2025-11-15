@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Erik Madryga</title>
+  <style>
+    :root {
+      --bg: #f8f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --subtext: #6b7280;
+      --accent: #2563eb;
+      --accent-hover: #1e40af;
+      --radius: 14px;
+      --transition: 0.3s ease;
+    }
+
+    /* Dark mode variables */
+    [data-theme="dark"] {
+      --bg: #111827;
+      --card: #1f2937;
+      --text: #f9fafb;
+      --subtext: #9ca3af;
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .container {
+      max-width: 820px;
+      margin: auto;
+      padding: 40px 20px;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      animation: slideDown 0.8s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.6rem;
+    }
+
+    p {
+      margin-top: 10px;
+      color: var(--subtext);
+      font-size: 1.05rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-top: 20px;
+      transition: background var(--transition), box-shadow var(--transition);
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .links a {
+      margin-right: 18px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: white;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: background var(--transition), transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .skill {
+      background: #eef2ff;
+      padding: 8px 14px;
+      border-radius: var(--radius);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #3730a3;
+      transition: background var(--transition);
+    }
+
+    [data-theme="dark"] .skill {
+      background: #1e3a8a;
+      color: #e0e7ff;
+    }
+
+    /* Profile photo */
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease;
+    }
+
+    /* Theme toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 14px;
+      background: var(--card);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background var(--transition);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">Toggle Theme</div>
+
+  <div class="container">
+
+    <!-- Profile Photo -->
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+
+    <!-- Header -->
+    <h1>Erik Madryga</h1>
+    <p>Software Engineer with deep experience in crafting clean, reliable, and scalable interfaces. I specialize in React, React Native, Next.js, and TypeScript, and I love turning complex ideas into intuitive user experiences. Currently focused on building performant front-end architectures and modern mobile experiences.</p>
+
+    <div class="links">
+      <a href="https://github.com/erik-madryga">GitHub</a>
+      <a href="https://www.linkedin.com/in/erikmadryga/">LinkedIn</a>
+      <a href="mailto:madryga7@gmail.com">Email</a>
+    </div>
+
+    <!-- Resume Request -->
+    <a 
+      class="button"
+      href="mailto:madryga7@gmail.com?subject=Resume Request&body=Hi Erik,%0D%0A%0D%0AI'd like to request a copy of your resume.%0D%0A%0D%0AThanks!"
+    >
+      Request My Résumé
+    </a>
+
+    <!-- Skills -->
+    <h2>Skills</h2>
+    <div class="card">
+      <div class="skills">
+        <div class="skill">React</div>
+        <div class="skill">React Native</div>
+        <div class="skill">Next.js</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">TypeScript</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Java</div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <h2>Projects</h2>
+    <div class="card">
+      <p><strong>Project Name</strong> — Short description about what it does and what tech you used.</p>
+      <p><strong>Another Project</strong> — Another short description.</p>
+      <p><em>(More coming soon)</em></p>
+    </div>
+
+    <!-- Experience -->
+    <h2>Experience</h2>
+    <div class="card">
+      <p><strong>Software Engineer – Best Buy</strong><br>
+      Working on the Discover-Nav team, maintaining large-scale customer-facing components across web and mobile. Focused on React, React Native, TypeScript, and Java-based services.</p>
+    </div>
+
+    <!-- Now -->
+    <h2>Now</h2>
+    <div class="card">
+      <p>• Improving my portfolio site  <br>
+         • Deepening expertise in Next.js  <br>
+         • Exploring modern React Native patterns  <br>
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute(
+        "data-theme",
+        current === "dark" ? "light" : "dark"
+      );
+    }
+  </script>
+
+</body>
+</html>
