@@ -1,1 +1,1 @@
-
+[![Request My Résumé](https://img.shields.io/badge/Request%20My%20Résumé-Email-blue?style=flat-square&logo=gmail)](mailto:madryga7@gmail.com?subject=Resume%20Request&body=Hi%20Erik%2C%0A%0AI'd%20like%20to%20request%20a%20copy%20of%20your%20resume.%0A%0AThanks!)
