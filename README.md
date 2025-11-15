@@ -1,0 +1,2 @@
+# erik-madryga.github.io
+Full Stack Engineer specializing in modern web and mobile development. I build performant, user-focused experiences using React, React Native, Next.js, JavaScript/TypeScript, Node, and Java. Currently improving large-scale customer experiences on the Best Buy Discover-Nav team.
