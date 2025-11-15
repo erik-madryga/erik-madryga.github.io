@@ -170,7 +170,7 @@
     
     .edu-card {
       display: flex;
-      align-items: center;
+      align-items: flex-start; /* aligns logo with the top of text block */
       gap: 16px;
       flex-wrap: wrap;
       padding: 20px;
@@ -185,12 +185,19 @@
       height: 60px;
       object-fit: contain;
       flex-shrink: 0;
+      margin-top: 4px; /* small nudge to better align with text */
     }
     
     .edu-text {
       flex: 1;
       min-width: 200px;
       color: var(--subtext);
+    }
+    
+    .edu-header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* ensures the header text is vertically centered with logo if needed */
     }
 
   </style>
@@ -282,8 +289,10 @@
       <div class="edu-card">
         <img src="images/csp-logo.jpeg" alt="Concordia University, St. Paul Logo" class="edu-logo">
         <div class="edu-text">
-          <strong>Bachelor of Science in Mathematics</strong><br>
-          <em>Concordia University, St. Paul — 2018</em>
+          <div class="edu-header">
+            <strong>Bachelor of Science in Mathematics</strong><br>
+            <em>Concordia University, St. Paul — 2018</em>
+          </div>
           <p>Focused on advanced mathematics courses and projects.</p>
         </div>
       </div>
@@ -291,12 +300,15 @@
       <div class="edu-card">
         <img src="images/usd-logo.jpeg" alt="University of South Dakota Logo" class="edu-logo">
         <div class="edu-text">
-          <strong>Master of Science in Mathematics</strong><br>
-          <em>University of South Dakota — 2021</em>
+          <div class="edu-header">
+            <strong>Master of Science in Mathematics</strong><br>
+            <em>University of South Dakota — 2021</em>
+          </div>
           <p>Specialized in advanced topics and research in mathematics.</p>
         </div>
       </div>
     </div>
+
 
     <!-- Now -->
     <h2>Now</h2>
